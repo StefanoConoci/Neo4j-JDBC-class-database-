@@ -1,1 +1,3 @@
-# Neo4j-JDBC-class-database-
+# Neo4j-JDBC-class-database
+
+Basic Neo4j JDBC usage to model a class with students which have personal projects and group projects. Simply needs to have neo4j installed on local host. Used default port 7474. It's possible to set authentication property inside the code. For this upload I used as user neo4j and as password: password to be really general. This demo is based on the the driver version 2.3.2 which is actually possible to download from this repository. I also put a file called coolqueries.txt in which there are some fun queries which can be executed directly from the browser control pannel (or by modifying the project inside the code) to visualize the data. 
