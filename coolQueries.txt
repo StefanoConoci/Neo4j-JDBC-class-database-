@@ -1,0 +1,14 @@
+Retrieve all group relationships:
+MATCH ()-[b:AS_GROUP]->() return b
+
+Retrive all individual project relationships:
+MATCH ()-[b:AS_INDIVIDUAL]->() return b
+
+Retrieve all paths with people doing the same individual project: 
+MATCH ()-[b:AS_INDIVIDUAL]->()<-[:AS_INDIVIDUAL]-() RETURN b
+
+Retrive number of individual project subjects done by more than one student:
+MATCH ()-[:AS_INDIVIDUAL]->(project)<-[:AS_INDIVIDUAL]-() RETURN count(DISTINCT project)
+
+Get all groups project name with size >= 3:
+MATCH (:Student)-[:AS_GROUP]->(g:Group) WITH count(*) as number,g as group WHERE number>=3 RETURN group
